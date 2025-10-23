@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "meta": {
     "name": "Test Pup",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "logoPath": "logo.png",
     "shortDescription": "A minimal test pup for Dogeboox testing",
     "longDescription": "Test Pup is a minimal application that logs its version. Used for testing Dogebox functionality.",
@@ -33,4 +33,3 @@
   "dependencies": [],
   "metrics": null
 }
-

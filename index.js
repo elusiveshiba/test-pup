@@ -7,16 +7,16 @@ console.log('[STARTUP] Test Pup starting...');
 console.log('[STARTUP] __dirname:', __dirname);
 console.log('[STARTUP] cwd:', process.cwd());
 
-// Read version from version.json
-const versionFile = path.join(__dirname, 'version.json');
-console.log('[STARTUP] Looking for version file at:', versionFile);
+// Read version from package.json
+const packageFile = path.join(__dirname, 'package.json');
+console.log('[STARTUP] Looking for package file at:', packageFile);
 
 let versionData;
 try {
-  versionData = JSON.parse(fs.readFileSync(versionFile, 'utf8'));
-  console.log('[STARTUP] Version file loaded successfully');
+  versionData = JSON.parse(fs.readFileSync(packageFile, 'utf8'));
+  console.log('[STARTUP] Package file loaded successfully');
 } catch (error) {
-  console.error('[ERROR] Failed to load version.json:', error.message);
+  console.error('[ERROR] Failed to load package.json:', error.message);
   console.error('[ERROR] Files in __dirname:', fs.readdirSync(__dirname));
   process.exit(1);
 }

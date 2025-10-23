@@ -1,10 +1,11 @@
 {
   "name": "test-pup",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "Minimal test pup for Dogebox testing",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "sync-version": "node sync-version.js"
   },
   "keywords": ["dogebox", "pup", "testing"],
   "author": "",

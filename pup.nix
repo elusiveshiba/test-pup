@@ -3,7 +3,7 @@
 let
   testPupBuild = pkgs.stdenv.mkDerivation {
     pname = "test-pup";
-    version = "0.1.0";
+    version = "1.0.1";
     src = ./.; 
 
     buildPhase = ''
