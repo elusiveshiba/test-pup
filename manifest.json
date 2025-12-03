@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "meta": {
     "name": "Test Pup",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "logoPath": "logo.png",
     "shortDescription": "A minimal test pup for Dogeboox testing",
     "longDescription": "Test Pup is a minimal application that logs its version. Used for testing Dogebox functionality.",
@@ -14,7 +14,7 @@
   "container": {
     "build": {
       "nixFile": "pup.nix",
-      "nixFileSha256": "5ecf920d3dd69ec8ba7a08b91a2660bdcb359ce89bfc6c02e26ab1f5d44a3ad1"
+      "nixFileSha256": "17781f0a86270c3da57c990b40b03f96850e1b2d0b4d9bb995920b56ab150bac"
     },
     "services": [
       {
