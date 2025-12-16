@@ -11,6 +11,7 @@
   "config": {
     "sections": [
       {
+        "name": "required_settings",
         "title": "Required Settings",
         "fields": [
           {
@@ -24,6 +25,7 @@
         ]
       },
       {
+        "name": "optional_settings",
         "title": "Optional Settings",
         "fields": [
           {
@@ -43,9 +45,13 @@
           {
             "name": "enable_metrics",
             "label": "Enable Metrics",
-            "type": "boolean",
+            "type": "select",
             "required": false,
-            "default": true,
+            "default": "true",
+            "options": [
+              {"value": "true", "label": "Enabled"},
+              {"value": "false", "label": "Disabled"}
+            ],
             "description": "Enable performance metrics collection"
           }
         ]
