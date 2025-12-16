@@ -3,8 +3,8 @@
 let
   testPupBuild = pkgs.stdenv.mkDerivation {
     pname = "test-pup";
-    version = "1.0.2";
-    src = ./.; 
+    version = "1.0.3";
+    src = ./.;
 
     buildPhase = ''
       # No build needed, just copy files

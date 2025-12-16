@@ -2,19 +2,60 @@
   "manifestVersion": 1,
   "meta": {
     "name": "Test Pup",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "logoPath": "logo.png",
     "shortDescription": "A minimal test pup for Dogeboox testing",
     "longDescription": "Test Pup is a minimal application that logs its version. Used for testing Dogebox functionality.",
     "upstreamVersions": null
   },
   "config": {
-    "sections": null
+    "sections": [
+      {
+        "title": "Required Settings",
+        "fields": [
+          {
+            "name": "server_url",
+            "label": "Server URL",
+            "type": "text",
+            "required": true,
+            "default": "https://api.example.com",
+            "description": "The URL of the server to connect to"
+          }
+        ]
+      },
+      {
+        "title": "Optional Settings",
+        "fields": [
+          {
+            "name": "log_level",
+            "label": "Log Level",
+            "type": "select",
+            "required": false,
+            "default": "info",
+            "options": [
+              {"value": "debug", "label": "Debug"},
+              {"value": "info", "label": "Info"},
+              {"value": "warn", "label": "Warning"},
+              {"value": "error", "label": "Error"}
+            ],
+            "description": "Set the logging verbosity"
+          },
+          {
+            "name": "enable_metrics",
+            "label": "Enable Metrics",
+            "type": "boolean",
+            "required": false,
+            "default": true,
+            "description": "Enable performance metrics collection"
+          }
+        ]
+      }
+    ]
   },
   "container": {
     "build": {
       "nixFile": "pup.nix",
-      "nixFileSha256": "17781f0a86270c3da57c990b40b03f96850e1b2d0b4d9bb995920b56ab150bac"
+      "nixFileSha256": "12a2a4f39d6049178f3fed8c16e6a20045f78271612cc0b50e5164e97ef4b580"
     },
     "services": [
       {
