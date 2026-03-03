@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "meta": {
     "name": "Test Pup",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "logoPath": "logo.png",
     "shortDescription": "A minimal test pup for Dogeboox testing",
     "longDescription": "Test Pup is a minimal application that logs its version. Used for testing Dogebox functionality.",
@@ -19,7 +19,7 @@
             "label": "Server URL",
             "type": "text",
             "required": true,
-            "description": "The URL of the server to connect to"
+            "help": "The URL of the server to connect to"
           }
         ]
       },
@@ -28,30 +28,12 @@
         "title": "Optional Settings",
         "fields": [
           {
-            "name": "log_level",
-            "label": "Log Level",
-            "type": "select",
-            "required": false,
-            "default": "info",
-            "options": [
-              {"value": "debug", "label": "Debug"},
-              {"value": "info", "label": "Info"},
-              {"value": "warn", "label": "Warning"},
-              {"value": "error", "label": "Error"}
-            ],
-            "description": "Set the logging verbosity"
-          },
-          {
             "name": "enable_metrics",
             "label": "Enable Metrics",
-            "type": "select",
+            "type": "toggle",
             "required": false,
-            "default": "true",
-            "options": [
-              {"value": "true", "label": "Enabled"},
-              {"value": "false", "label": "Disabled"}
-            ],
-            "description": "Enable performance metrics collection"
+            "default": true,
+            "help": "Enable performance metrics collection"
           }
         ]
       }
@@ -60,7 +42,7 @@
   "container": {
     "build": {
       "nixFile": "pup.nix",
-      "nixFileSha256": "025bdd061a49fb33095ba59a8568ce814955b5082818416d517f2d17f63897d8"
+      "nixFileSha256": "f0a9e2f57586fe5e286c8471aef4a4cefbe14a4c71267de895f3f0dcb7c61a19"
     },
     "services": [
       {
@@ -72,7 +54,16 @@
         }
       }
     ],
-    "exposes": [],
+    "exposes": [
+      {
+        "name": "UI",
+        "type": "http",
+        "port": 1234,
+        "interfaces": null,
+        "listenOnHost": false,
+        "webUI": true
+      }
+    ],
     "requiresInternet": false
   },
   "interfaces": null,
